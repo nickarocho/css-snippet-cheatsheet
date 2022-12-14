@@ -1,12 +1,12 @@
 :root {
   --outer-space: #33393f;
-  --bright-turqouise: #2aefcb;
+  --bright-turquoise: #2aefcb;
   --gin: #e0eae4;
   --heliotrope: #e866ec;
 }
 
 ::selection {
-  background: var(--bright-turqouise);
+  background: var(--bright-turquoise);
   color: var(--outer-space);
 }
 
@@ -102,7 +102,7 @@ footer {
  .card-column {
   flex: 1 0 100%;
   padding: 1.5rem;
-  transition: flex-basis 5s linear;
+  transition: flex-basis 500ms linear;
   margin-bottom: 1.5rem;
  }
 
@@ -116,7 +116,7 @@ footer {
 
   outline: 2px dashed var(--gin);
   outline-offset: -2px;
-  /* TODO: transition */
+  transition: all 0.5s ease-in-out;
 }
 
 .code-card .card-header {
@@ -127,7 +127,12 @@ footer {
   padding: 0.5rem 1rem;
   background-color: var(--outer-space);
   color: var(--heliotrope);
-  /* TODO: transition */
+  transition: all 0.5s ease-in-out;
+}
+
+.code-card:hover,
+.code-card:hover .card-header {
+  box-shadow: inset 0px 0px 8px var(--heliotrope), 0 0 15px var(--heliotrope);
 }
 
 .code-card .code-block {
